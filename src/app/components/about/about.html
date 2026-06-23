@@ -5,7 +5,10 @@
     </div>
     <div class="about-content">
       <h2 class="about-heading">{{heading}}</h2>
-      <p class="about-body">{{body}}</p>
+      <div class="about-body" [innerHTML]="bodyHtml"></div>
+      <div class="about-cta">
+        <a mat-button class="cta-link" href="https://www.linkedin.com/in/ludovic-beghin" target="_blank" rel="noopener noreferrer" aria-label="Let's talk on LinkedIn">Let's talk</a>
+      </div>
     </div>
   </main>
 </section>

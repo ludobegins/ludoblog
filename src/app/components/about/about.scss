@@ -45,6 +45,35 @@ section#about {
   line-height: 1.6;
 }
 
+.about-cta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-cta .cta-link,
+.about-cta a.mat-button {
+  /* minimalist ghost-style Material button */
+  background: transparent;
+  color: #0b6efd;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid rgba(11,110,253,0.12);
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.about-cta a.mat-button:hover {
+  background-color: rgba(11,110,253,0.04);
+  border-color: rgba(11,110,253,0.22);
+}
+
+.about-cta a.mat-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(11,110,253,0.08);
+}
+
 @media (min-width: 900px) {
   .about-wrap {
     flex-direction: row;
