@@ -8,7 +8,8 @@ $muted: #6b7280;
 
 main {
 	background: $bg;
-	min-height: 100vh;
+	/* subtract header height so content stays centered below the sticky header */
+	min-height: calc(100vh - var(--header-height, 72px));
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -60,6 +61,34 @@ main {
 	max-width: 44rem;
 	padding: 0 0.5rem;
 }
+
+	.social {
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	.social a {
+		display: inline-block;
+		border-radius: 8px;
+		padding: 6px;
+		transition: transform 160ms ease, box-shadow 160ms ease;
+	}
+
+	.social a:focus,
+	.social a:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+	}
+
+	.social img {
+		width: 36px;
+		height: 36px;
+		display: block;
+		object-fit: contain;
+	}
 
 // Small enhancement: subtle entrance
 @media (prefers-reduced-motion: no-preference) {
